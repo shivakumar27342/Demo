@@ -8,7 +8,9 @@ resource "google_project_service" "pubsub-service" {
 resource "google_pubsub_topic" "topic" {
   name = "${var.topic["name"]}"
   project = "{var.project-id}"
-  depends_on = [google_project_service.pubsub-service]
+  depends_on = [
+    google_project_service.pubsub-service
+  ]
 }
 
 resource "google_pubsub_subscription" "subscription" {
@@ -16,5 +18,7 @@ resource "google_pubsub_subscription" "subscription" {
   name = "${element(keys(var.topic["subscriptions"]), count.index)}"
   topic = "projects/${var.project-id}/topics/${var.topic["name"]}"
   project = "${var.project-id}"
-  depends_on = [google_pubsub_topic.topic]
+  depends_on = [
+    google_pubsub_topic.topic
+  ]
 }
