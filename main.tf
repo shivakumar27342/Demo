@@ -1,4 +1,3 @@
-resource "google_pubsub_topic" "example" {
-  name = "example-topic"
-
+resource "google_pubsub_topic" "mytopic" {
+  name = "sample-topic"
 }
