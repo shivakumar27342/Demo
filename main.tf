@@ -1,9 +1,9 @@
-resource "google_pubsub_topic" "test" {
-  name = "var.topic"
+resource "google_pubsub_topic" "eample" {
+  name = "eample-topic"
 
   message_storage_policy {
     allowed_persistence_regions = [
-      "var.region",
+      "us-central1",
     ]
   }
 }
