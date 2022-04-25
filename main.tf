@@ -5,7 +5,7 @@ resource "google_project_service" "pubsub-service" {
     command = "sleep 60"
   }
 }
-resource "google_pubsub_topic" "mytopic" {
+resource "google_pubsub_topic" "topic" {
   name = "${var.topic["name"]}"
   project = "{var.project-id}"
   depends_on = google_project_service.pubsub-service
