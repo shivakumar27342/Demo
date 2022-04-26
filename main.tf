@@ -1,4 +1,4 @@
-resource "google_project" "project" {
+resource "google_project" "project-id" {
   project = "${var.project-id}"
 }
 resource "google_pubsub_topic" "topic" {
