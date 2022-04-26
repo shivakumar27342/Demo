@@ -6,7 +6,7 @@ resource "google_project_service" "pubsub-service" {
   }
 }
 resource "google_pubsub_topic" "topic" {
-  name = "${var.topic["name"]}"
+  name = "{var.topic}"
   project = "{var.project-id}"
   depends_on = [
     google_project_service.pubsub-service
