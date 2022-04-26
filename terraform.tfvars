@@ -1,5 +1,5 @@
 //Main variables
-project = "My First Project"
+project = "engaged-mariner-346403"
 
 region   = "us-central1"
 
