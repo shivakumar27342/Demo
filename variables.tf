@@ -22,8 +22,8 @@ variable "topic" {
   default = {
     name = "topic-1"
     publisher = ["publisher-1"]
-    subscriptions = {
-      subscription-1 = ["subscriber-1"]
-    }
+#     subscriptions = {
+#       subscription-1 = ["subscriber-1"]
+#     }
   }  
 }
