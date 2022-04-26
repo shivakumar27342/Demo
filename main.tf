@@ -1,16 +1,9 @@
-resource "google_project_service" "pubsub-service" {
+resource "google_project" "project" {
   project = "${var.project-id}"
-  service = "pubsub.googleapis.com"
-  provisioner "local-exec" {
-    command = "sleep 60"
-  }
 }
 resource "google_pubsub_topic" "topic" {
   name = "{var.topic}"
   project = "{var.project-id}"
-  depends_on = [
-    google_project_service.pubsub-service
-  ]
 }
 
 # resource "google_pubsub_subscription" "subscription" {
