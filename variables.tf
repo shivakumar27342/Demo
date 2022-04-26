@@ -1,5 +1,6 @@
-variable "project-id" {
-  default = "My First Project"
+variable "project" {
+
+  type        = string
 
 }
 
